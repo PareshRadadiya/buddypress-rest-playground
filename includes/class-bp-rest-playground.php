@@ -57,17 +57,17 @@ final class BuddyPress_Rest_PlayGround {
 
 		register_rest_route( $namespace, '/activity-post/', array(
 			'methods'  => 'POST',
-			'callback' => 'bp_rest_pl_activity_comment',
+			'callback' => array( $this, 'bp_rest_pl_activity_comment' ),
 		) );
 
 		register_rest_route( $namespace, '/comment-post/', array(
 			'methods'  => 'POST',
-			'callback' => 'bp_rest_pl_post_comment',
+			'callback' => array( $this, 'bp_rest_pl_post_comment' ),
 		) );
 
 		register_rest_route( $namespace, '/reply-post/', array(
 			'methods'  => 'POST',
-			'callback' => 'bp_rest_pl_reply_post',
+			'callback' => array( $this, 'bp_rest_pl_reply_post' ),
 		) );
 	}
 
